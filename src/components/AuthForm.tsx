@@ -25,7 +25,7 @@ export default function AuthForm() {
     if (!inputs.email.trim() || !inputs.password.trim()) {
       // alert user to fill up - authError
       setAuthError("Please fill up all the fields");
-      // remove authError after 4sec
+      // remove authError after 5sec
       setTimeout(() => setAuthError(""), 5000);
       // exit fn
       return;
@@ -35,7 +35,7 @@ export default function AuthForm() {
     if (!isEmail(inputs.email)) {
       // alert user of invalid email address
       setEmailError("Please use a valid email address");
-      // remove after 4sec
+      // remove after 5sec
       setTimeout(() => setEmailError(""), 5000);
       // exit fn
       return;
@@ -45,7 +45,7 @@ export default function AuthForm() {
     if (!isLogin && !inputs.confirmPassword.trim()) {
       // alert user that they need to confirm their password
       setPasswordError("Please confirm password");
-      // remove after 4sec
+      // remove after 5sec
       setTimeout(() => setPasswordError(""), 5000);
       // exit fn
       return;

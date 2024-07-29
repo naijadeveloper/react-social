@@ -2,7 +2,7 @@ import AuthForm from "@/components/AuthForm";
 
 export default function AuthPage() {
   return (
-    <main className="min-h-[100vh] flex items-center justify-center px-4">
+    <div className="h-full flex items-center justify-center">
       <div className="p-0 py-5 flex items-center justify-center max-md:w-[60%] max-sm:w-[75%] max-[450px]:w-[100%]">
         {/* left-hand side */}
         <div className="hidden md:block">
@@ -19,6 +19,6 @@ export default function AuthPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
