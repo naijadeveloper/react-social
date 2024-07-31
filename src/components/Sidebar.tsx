@@ -49,18 +49,22 @@ export default function Sidebar() {
     },
   ];
   return (
-    <div className="w-full h-full border-r-2 border-border py-8 md:px-4">
-      <div className="sticky top-2 left-0 w-full h-full flex flex-col gap-8">
+    <div className="w-full h-full border-r-2 border-border md:px-4">
+      <div className="sticky top-0 left-0 w-full h-screen flex flex-col gap-8">
         {/* instagram logo for desktop and mobile */}
         <Link
           to="/"
-          className={cn(`${buttonVariants({ variant: "link" })} max-md:hidden`)}
+          className={cn(
+            `${buttonVariants({ variant: "link" })} mt-3 max-md:hidden`
+          )}
         >
           <InstagramLogo />
         </Link>
         <Link
           to="/"
-          className={cn(`${buttonVariants({ variant: "link" })} md:hidden`)}
+          className={cn(
+            `${buttonVariants({ variant: "link" })} mt-3 md:hidden`
+          )}
         >
           <InstagramMobileLogo />
         </Link>
@@ -111,7 +115,7 @@ export default function Sidebar() {
         </div>
 
         {/* logout item */}
-        <div className="w-full flex grow max-md:justify-center items-end">
+        <div className="w-full flex grow max-md:justify-center items-end pb-3">
           <TooltipProvider delayDuration={500}>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -120,7 +124,7 @@ export default function Sidebar() {
                   className={cn(
                     `${buttonVariants({
                       variant: "link",
-                    })} flex justify-center md:justify-start gap-x-4 hover:no-underline hover:bg-border/80`
+                    })} flex w-full justify-center md:justify-start gap-x-4 hover:no-underline hover:bg-border/80`
                   )}
                 >
                   <BiLogOut size={24} />

@@ -19,7 +19,7 @@ export default function PageLayout({
       )}
 
       {/* main content */}
-      <main className={cn("grow w-full px-4")}>{children}</main>
+      <main className={cn("grow px-4")}>{children}</main>
     </div>
   );
 }
